@@ -15,8 +15,8 @@ function draw() {
 
   if(mouseIsPressed){
     
-    let wind = createVector(0.1, 0);
-    ball.addForce(wind);
+    let shooting = createVector(1, 1);
+    ball.addForce(shooting);
   }
 
   ball.update();
