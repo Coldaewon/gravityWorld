@@ -13,14 +13,21 @@ function draw() {
   let gravity = createVector(0, 0.3);
   ball.addForce(gravity);
 
-  if(mouseIsPressed){
-    
-    let shooting = createVector(1, 1);
-    ball.addForce(shooting);
-  }
+ 
+ ball.addForce(took)
 
   ball.update();
   ball.show();
   
 }
 
+function mouseClicked(){
+  
+  // let took = createVector();
+ 
+  let mPos = createVector(mouseX, mouseY);
+  let took = p5.Vector.sub(ball.pos, mPos);
+  took.mult(0.1);
+  ball.addForce(took);
+ 
+}
